@@ -1,0 +1,57 @@
+Задание 1
+
+print('Введите скорость')
+A=int(input())
+print('Введите время')
+B=int(input())
+C=0
+print('_________________________________')
+for number in range(B):
+    C=C+A
+    print(number+1,  C)
+
+Задание 2
+
+print('Введите число')
+A=int(input())
+i=0
+while A >= 0:
+    i=A+i
+    print('Введите число')
+    A=int(input())
+   
+    if A < 0:
+        print('сумма =',i) 
+        break
+
+Задание 3
+
+print('Введите число')
+A=int(input())
+F=1
+while A > 1:
+    F=F*A
+    A=A-1
+    print(F)
+
+Задание 4
+
+print('Введите стартовое кол-во:')
+A=int(input())
+print('Введите кол-во увеличения:')
+B=int(input())
+print('Введите кол-во дней:')
+C=int(input())
+
+print('День',  'Популяция')
+for number in range(C):
+    print(number+1,"  ",  A)
+    X=A/100*B
+    A=A+X
+
+Задание 5
+
+print('Введите высоту')
+h=int(input())
+for i in range(1, h+1):
+	print("#", " "*(i-1), "#", sep="")
