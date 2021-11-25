@@ -1,0 +1,57 @@
+задание 1
+def print_till_zero(n):
+if n == 0:
+return
+print(n)
+return print_till_zero(n-1)
+print(print_till_zero(10))
+
+
+задание 2
+def is_palindrome(s):
+if len(s) == 0:
+return True
+if(s[0]==s[-1]):
+return is_palindrome(s[1:-1])
+return False
+def space_remove(s : str):
+if(s.find(' ')<0):
+return s
+return space_remove(s[:s.find(' ')]+s[s.find(' ')+1:])
+print(is_palindrome(space_remove(input().lower())))
+
+
+задание 3
+def power(a,b):
+if(b==0):
+return 1
+if(b % 2 != 0):
+return power(a,b-1)*a
+else:
+k=power(a,b//2)
+return k*k
+a,b=int(input()),int(input())
+print(power(a,b))
+
+
+задание 4
+def max_in(array):
+if(len(array)==1):
+return array[0]
+if(array[0]>=array[-1]):
+return max_in(array[:-2])
+if(array[-1]>=array[0]):
+return max_in(array[1:])
+array=(input().split(' '))
+for x in range(len(array)):
+array[x]=int(array[x])
+
+print(array.index(max_in(array)))
+
+
+задание 5
+def fibbonachi(n):
+if n in (1,2):
+return 1
+return fibbonachi(n-1)+fibbonachi(n-2)
+print(fibbonachi(int(input())))
